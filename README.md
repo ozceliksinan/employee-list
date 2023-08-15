@@ -1,4 +1,4 @@
-# Employee List Application
+## Employee List Application
 
 For the application to work, the file calisanlardb.sql located in the root directory must be included in phpMyAdmin.
 
