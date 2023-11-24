@@ -4,11 +4,11 @@ For the application to work, the file calisanlardb.sql located in the root direc
 
 Enter phpMyAdmin and create a new database. Let's name the database we have created as calisanlarprojesidb.
 
-![sinanozcelik.com](1.jpg)
+![sinanozcelik.com](img/1.jpg)
 
 Then, let's import the calisanlarprojesidb.sql file in our project file into the database we have created.
 
-![sinanozcelik.com](2.jpg)
+![sinanozcelik.com](img/2.jpg)
 
 As the last step, let's open the /src/database.java file in edit mode and fill in the necessary information for the database according to you.
 
