@@ -36,21 +36,19 @@ public class CalisanIslemleri {
       return cikti;
     } catch (SQLException ex) {
       Logger
-        .getLogger(CalisanIslemleri.class.getName())
-        .log(Level.SEVERE, null, ex);
+          .getLogger(CalisanIslemleri.class.getName())
+          .log(Level.SEVERE, null, ex);
       return null;
     }
   }
 
   public void calisanGuncelle(
-    int id,
-    String yeni_ad,
-    String yeni_soyad,
-    String yeni_departman,
-    String yeni_maas
-  ) {
-    String sorgu =
-      "Update calisanlar set ad = ? , soyad = ? , departman = ? , maas = ? where id = ?";
+      int id,
+      String yeni_ad,
+      String yeni_soyad,
+      String yeni_departman,
+      String yeni_maas) {
+    String sorgu = "Update calisanlar set ad = ? , soyad = ? , departman = ? , maas = ? where id = ?";
 
     try {
       preparedStatement = con.prepareStatement(sorgu);
@@ -66,8 +64,8 @@ public class CalisanIslemleri {
       preparedStatement.executeUpdate();
     } catch (SQLException ex) {
       Logger
-        .getLogger(CalisanIslemleri.class.getName())
-        .log(Level.SEVERE, null, ex);
+          .getLogger(CalisanIslemleri.class.getName())
+          .log(Level.SEVERE, null, ex);
     }
   }
 
@@ -81,19 +79,17 @@ public class CalisanIslemleri {
       preparedStatement.executeUpdate();
     } catch (SQLException ex) {
       Logger
-        .getLogger(CalisanIslemleri.class.getName())
-        .log(Level.SEVERE, null, ex);
+          .getLogger(CalisanIslemleri.class.getName())
+          .log(Level.SEVERE, null, ex);
     }
   }
 
   public void calisanEkle(
-    String ad,
-    String soyad,
-    String departman,
-    String maas
-  ) {
-    String sorgu =
-      "Insert Into calisanlar (ad,soyad,departman,maas) VALUES(?,?,?,?)";
+      String ad,
+      String soyad,
+      String departman,
+      String maas) {
+    String sorgu = "Insert Into calisanlar (ad,soyad,departman,maas) VALUES(?,?,?,?)";
 
     try {
       preparedStatement = con.prepareStatement(sorgu);
@@ -106,8 +102,8 @@ public class CalisanIslemleri {
       preparedStatement.executeUpdate();
     } catch (SQLException ex) {
       Logger
-        .getLogger(CalisanIslemleri.class.getName())
-        .log(Level.SEVERE, null, ex);
+          .getLogger(CalisanIslemleri.class.getName())
+          .log(Level.SEVERE, null, ex);
     }
   }
 
@@ -125,21 +121,20 @@ public class CalisanIslemleri {
       return rs.next();
     } catch (SQLException ex) {
       Logger
-        .getLogger(CalisanIslemleri.class.getName())
-        .log(Level.SEVERE, null, ex);
+          .getLogger(CalisanIslemleri.class.getName())
+          .log(Level.SEVERE, null, ex);
       return false;
     }
   }
 
   public CalisanIslemleri() {
-    String url =
-      "jdbc:mysql://" +
-      Database.host +
-      ":" +
-      Database.port +
-      "/" +
-      Database.db_ismi +
-      "?useUnicode=true&characterEncoding=utf8";
+    String url = "jdbc:mysql://" +
+        Database.host +
+        ":" +
+        Database.port +
+        "/" +
+        Database.db_ismi +
+        "?useUnicode=true&characterEncoding=utf8";
 
     try {
       Class.forName("com.mysql.jdbc.Driver");
@@ -148,16 +143,14 @@ public class CalisanIslemleri {
     }
 
     try {
-      con =
-        DriverManager.getConnection(
+      con = DriverManager.getConnection(
           url,
           Database.kullanici_adi,
-          Database.parola
-        );
+          Database.parola);
       System.out.println("Bağlantı Başarılı...");
     } catch (SQLException ex) {
       System.out.println("Bağlantı Başarısız...");
-      //ex.printStackTrace();
+      // ex.printStackTrace();
     }
   }
 }

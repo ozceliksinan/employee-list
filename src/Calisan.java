@@ -6,13 +6,7 @@ public class Calisan {
   private String departman;
   private String maas;
 
-  public Calisan(
-    int id,
-    String ad,
-    String soyad,
-    String departman,
-    String maas
-  ) {
+  public Calisan(int id, String ad, String soyad, String departman, String maas) {
     this.id = id;
     this.ad = ad;
     this.soyad = soyad;
