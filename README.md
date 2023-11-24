@@ -30,7 +30,3 @@ public class Database {
 Username to login to the application: admin
 
 User password to login to the application: admin
-
-Contact e-mail for any question: info@sinanozcelik.com
-
-For more: sinanozcelik.com
